@@ -1,0 +1,255 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    /* background: url('/1.avif') no-repeat center center fixed; */
+    background-size: cover;
+    
+}
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(58, 9, 144, 0.8);
+    z-index: 1000;
+}
+
+
+/* Right Side - Feedback Button */
+.navbar-right .feedback-btn {
+    font-size: 18px;
+    color: #f8f9fa;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #28a745;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+/* Icon styling inside feedback button */
+.navbar-right .feedback-btn i {
+    margin-left: 10px;
+}
+
+.logo {
+    color: rgb(184, 131, 234);
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+.navlist a {
+    color: rgb(205, 172, 236);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 12px;
+    border: 2px solid rgb(224, 147, 160);
+    border-radius: 25px;
+    transition: all .3s ease;
+}
+
+.navlist a:hover,
+.navlist a.active {
+    box-shadow: 0 0 1rem rgb(57, 27, 85);
+    background: rgb(153, 102, 201);
+    color:rgba(30, 27, 27, 0.2);
+}
+
+/* Parallax Effect */
+.parallax {
+    background: url('https://img.freepik.com/free-photo/ingredients-cabbage-carrot-pie-cabbage-carrots-eggs-flour-milk-butter-spices-white-background_127032-2819.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(240, 233, 233);
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    transform: translateY(-120px);
+    
+}
+
+.parallax h1 {
+
+    font-size: 50px;
+    text-shadow: 2px 2px 5px rgb(63, 27, 115);
+}
+
+.parallax p {
+    font-size: 20px;
+    text-shadow: 2px 2px 5px rgb(63, 27, 115);
+}
+
+.parallax {
+    padding-top: 180px;
+}
+.parallax h1 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.parallax p {
+    margin-bottom: 50px;
+}
+.parallax-images {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+.parallax-images img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* Search Section */
+.search-section {
+    text-align: center;
+    /* margin: 40px 0; */
+    transform: translateY(-80px);
+
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+}
+
+.searchbox {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 2px solid #ae22ff;
+    font-size: 16px;
+}
+
+.search-section button {
+    padding: 10px;
+    background: #ae22ff;
+    border: none;
+    cursor: pointer;
+    color: rgb(28, 26, 26);
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+/* Recipes Section */
+.recipe-container {
+    text-align: center;
+    /* padding: 40px; */
+    transform: translateY(-80px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 20px;
+    place-items: center;
+}
+.recipe{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(78, 73, 73, 0.1), -5px -5px 10px rgba(34, 34 , 34, 0.5);
+    cursor: pointer;
+    max-width: 500px;
+}
+
+.recipe img{
+    height: 300px;
+}
+
+.recipe h3{
+    font-size: 24px;
+    margin-block: 5px;
+}
+
+.recipe p{
+    font-size: 20px;
+    color: #4a4a4a;
+    margin: 5px 0;
+}
+.recipe span {
+    font-weight: 600;
+}
+.recipe button {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    border : none;
+    cursor: pointer;
+    margin: 18px auto;
+    background-color: #f44336;
+    color: #fff;
+}
+
+.recipe button:hover{
+    background-color: #ff5c5c;
+}
+
+
+/* Footer */
+footer {
+    background: rgb(20, 20, 20);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .navlist {
+        flex-direction: column;
+    }
+
+    .navlist li {
+        margin: 10px 0;
+    }
+
+    .parallax h1 {
+        font-size: 36px;
+    }
+
+    .parallax p {
+        font-size: 16px;
+    }
+}
+
+body{
+    background: url('/1.avif') no-repeat center center fixed;
+    background-size: cover;
+}

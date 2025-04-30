@@ -1,0 +1,249 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: rgba(58, 9, 144, 0.8);
+    z-index: 1000;
+}
+
+.logo {
+    color: rgb(184, 131, 234);
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navlist {
+    list-style: none;
+    display: flex;
+}
+
+.navlist li {
+    margin: 0 15px;
+}
+
+.navlist a {
+    color: rgb(205, 172, 236);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 12px;
+    border: 2px solid rgb(224, 147, 160);
+    border-radius: 25px;
+    transition: all .3s ease;
+}
+
+.navlist a:hover {
+    box-shadow: 0 0 1rem rgb(57, 27, 85);
+    background: rgb(153, 102, 201);
+    color:rgba(30, 27, 27, 0.2);
+}
+
+/* Parallax Effect */
+.parallax {
+    background: url('food-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(240, 233, 233);
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+}
+
+.parallax h1 {
+    font-size: 50px;
+    text-shadow: 2px 2px 5px rgb(63, 27, 115);
+}
+
+/*centring the search bar*/
+.search-container{
+    margin-top: 20px;
+}
+
+.parallax p {
+    font-size: 20px;
+    text-shadow: 2px 2px 5px rgb(63, 27, 115);
+}
+
+/* Search Section */
+.search-section {
+    text-align: center;
+    margin-top: 100px ;
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#search-box {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 2px solid #ae22ff;
+    font-size: 16px;
+}
+
+#search-form button {
+    padding: 10px;
+    background: #ae22ff;
+    border: none;
+    cursor: pointer;
+    color: rgb(28, 26, 26);
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+/* Recipes Section */
+.recipe-container {
+    text-align: center;
+    padding: 40px;
+}
+
+#recipes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.recipe {
+    background: white;
+    color: black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.recipe img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe h3 {
+    padding: 10px;
+}
+
+.recipe p {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Footer */
+footer {
+    background: rgb(20, 20, 20);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .navlist {
+        flex-direction: column;
+    }
+
+    .navlist li {
+        margin: 10px 0;
+    }
+
+    .parallax h1 {
+        font-size: 36px;
+    }
+
+    .parallax p {
+        font-size: 16px;
+    }
+}
+
+body{
+    background: url('/1.avif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Advanced Parallax Effect */
+.parallax {
+    position: relative;
+    background: url('food-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    color: rgb(240, 233, 233);
+    font-size: 24px;
+    font-weight: bold;
+    overflow: hidden;
+    padding-top: 100px; /* Moves content slightly upwards */
+}
+.parallax::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.parallax h1, .parallax p {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 2s ease-in-out;
+}
+.food-images {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 25px;
+    margin-top: 70px;
+}
+.food-images img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
